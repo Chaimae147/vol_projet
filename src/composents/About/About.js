@@ -4,11 +4,13 @@ import './About.css'
 import Navbar from '../navbar/Navbar'
 export default function About() {
   return (
-    <div >
+    <div className='boody' >
+        <div className='left'> 
         <Navbar/>
-        <div className='oody' >
+      </div>
+        <div  className='oody' >
+        <h1 className='titre'>Trouvez les meilleures offres avec TRAVAIL AIR</h1>
 
-          <h1 className='titre'>Trouvez les meilleures offres avec TRAVAIL AIR</h1>
    <div className="card-container">
       <Cards
         title="DUBAI"

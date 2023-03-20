@@ -1,0 +1,42 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+.centered-text {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    font-size: 32px;
+    text-align: left;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    margin-left: 100px;
+    font-weight: 800;
+    margin-top: 140px;
+    color:white
+    
+
+  }
+  .booknoww{
+    background-color: rgb(231, 238, 238);
+  color: #161616;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: normal;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 2px #333333;
+  box-shadow: 0px 2px 5px #999999;
+  margin-left: 100px;
+  margin-top: 20px;
+
+  }
+  .booknoww:hover{
+    background-color:rgb(204, 218, 219);
+    box-shadow: 0px 4px 8px #999999;  }
+    
+      

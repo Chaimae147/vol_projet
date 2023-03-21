@@ -12,7 +12,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar container">
       <div className="navbar-brand">
         <a href="/" style={{ color:'white' }}>TRAVEL AIR</a>
       </div>

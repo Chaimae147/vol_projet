@@ -4,6 +4,7 @@ import Navbar from './composents/navbar/Navbar';
 import Homee from './composents/Homee'
 import Reservation from './composents/Reservation/Reservation';
 import About from './composents/About/About'
+import Login from './composents/Login/Login';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
               <Route path='/' element={<Homee/>}/>
               <Route path='/About' element={<About/>}/>
               <Route path='/Reservatiom' element={<Reservation/>}/>
+              <Route path='/login' element={<Login/>}/>
+           
 
 
       </Routes>

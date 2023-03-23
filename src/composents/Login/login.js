@@ -2,7 +2,7 @@
 
 import React from 'react'
 import './login.css'
-export default function login() {
+export default function Login() {
   return (
     <div className='photologin'>
       <nav className='navbar container'>

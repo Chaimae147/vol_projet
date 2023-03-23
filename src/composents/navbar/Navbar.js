@@ -3,7 +3,7 @@ import './navbar.css';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser ,BiUserCircle} from '@fortawesome/free-solid-svg-icons'; 
-
+import  image  from './Travel_App_or_Website_Logo-removebg-preview.png' 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="navbar container">
       <div className="navbar-brand">
-        <a href="/" style={{ color:'white' }}>TRAVEL AIR</a>
+        <a href="/" style={{ color:'white'}}>TRAVEL AIR</a>
       </div>
       <button className="navbar-toggle" onClick={toggleMenu}>
         <span className="navbar-toggle-icon"></span>

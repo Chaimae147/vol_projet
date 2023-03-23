@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './composents/navbar/Navbar';
 import Homee from './composents/Homee'
 import Reservation from './composents/Reservation/Reservation';
+import ReservationForm from './composents/Reservation/ReservationForm';
 import About from './composents/About/About'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function App() {
@@ -12,7 +13,7 @@ function App() {
       <Routes>
               <Route path='/' element={<Homee/>}/>
               <Route path='/About' element={<About/>}/>
-              <Route path='/Reservatiom' element={<Reservation/>}/>
+              <Route path='/Reservatiom' element={<ReservationForm/>}/>
 
 
       </Routes>

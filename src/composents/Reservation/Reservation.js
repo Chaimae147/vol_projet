@@ -1,17 +1,17 @@
+
 import React from 'react'
 import Navbar from '../navbar/Navbar'
 import "./Reservation.css"
+
 export default function Reservation() {
   return (
     <div>
       <Navbar/>
      
-      <div className="row  " >
-<div className='my-5 c3 py-3 '>
+<div className='my-5 py-3  c3  '>
 <h1 className='title'>RESERVER </h1>
     
     {/*   </div> */}
-    </div>
 
    
 
@@ -35,3 +35,5 @@ export default function Reservation() {
 
   )
 }
+
+

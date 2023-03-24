@@ -10,6 +10,7 @@ function StepOne({ onNext }) {
   };
 
   return (
+    <div className='backgroundss'>
     <div className='my-5 py-3  c3  '>
 <h1 className='title'>RESERVER </h1>
     <form onSubmit={handleSubmit}>
@@ -23,6 +24,7 @@ function StepOne({ onNext }) {
       </label>
       <button type="submit">Suivant</button>
     </form>
+    </div>
     </div>
   );
 }

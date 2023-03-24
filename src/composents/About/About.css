@@ -40,7 +40,14 @@ border-radius: 8px; */
     margin-left: 20px;
     color: white;
   }
-  
+  .backgroundd{
+    background-image: url("../../../public/imgs/photo-1436491865332-7a61a109cc05.jfif");
+   background-size: cover;
+   height: 100%;
+   width: 100%;
+   position: relative;
+   top: 0;
+  }
 .card {
     border: 1px solid #e6d5f5;
     border-radius: 5px;
@@ -50,7 +57,9 @@ border-radius: 8px; */
     box-shadow: 0px 2px 5px #999999;
     
   }
-  
+  .card:hover{
+    background-color: #cacbcf;
+  }
   .card h2 {
     font-size: 20px;
     margin-bottom: 5px;

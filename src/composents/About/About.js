@@ -4,7 +4,7 @@ import './About.css'
 import Navbar from '../navbar/Navbar'
 export default function About() {
   return (
-    <div className='boody' >
+    <div className='backgroundd' >
         <div className='left'> 
         <Navbar/>
       </div>
@@ -48,6 +48,7 @@ export default function About() {
       description="VOLS À PARTIR DE 5000.0 MAD  À DUBAI"
      
     />
+    
 </div>
     </div>
     </div>

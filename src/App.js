@@ -15,8 +15,8 @@ function App() {
               <Route path='/' element={<Homee/>}/>
               <Route path='/About' element={<About/>}/>
 
-              <Route path='/Reservatiom' element={<ReservationForm/>}/>
-              <Route path='/Reservatiom' element={<Reservation/>}/>
+{/*               <Route path='/Reservatiom' element={<ReservationForm/>}/>
+ */}              <Route path='/Reservatiom' element={<Reservation/>}/>
               <Route path='/login' element={<Login/>}/>
            
 

@@ -8,29 +8,12 @@ export default function Reservation() {
     <div className='backgroundss'>
       <Navbar/>
      
-<div className='my-5 py-3  c3  '>
+{/* div className='my-5 py-3  c3  ' >
 <h1 className='title'>RESERVER </h1>
-<PremiereStep/>
-    {/*   </div> */}
 
-   
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  </div>
-  
+      </div> *
+  </div>  */}
+  <PremiereStep/>
     </div>
 
   )

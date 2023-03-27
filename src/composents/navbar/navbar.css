@@ -61,7 +61,7 @@
     transform: rotate(-45deg) translate(2px, -2px);
   }
   
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 994px) {
     .navbar-nav {
       position: absolute;
       top: 60px;

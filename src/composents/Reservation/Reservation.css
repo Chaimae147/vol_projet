@@ -12,14 +12,134 @@
     border-radius: 10px;
     background-color: white;
 margin: 40px;
+
    
   }
 
   .backgroundss{
-    background-image: url("../../../public/imgs/20150811DSCF4073-Edit_xgaplus.jpg");
+    background-image: url("../../../public/imgs/avion-actu-vol.1511866.jpeg");
    background-size: cover;
    height: 100vh;
    width: 100%;
    position: relative;
    top: 0;
   }
+
+  /*Premeiere Step */
+  .boddy{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+  }
+  .containner{
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 30px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+  }
+ .containner .form{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+ }
+ .containner .cover{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 50%;
+  
+ }
+ .containner .cover img{ 
+  
+  height: 100%;
+  width: 100%;
+
+  
+ }
+ .containner .form-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+.form-content .reser-form{
+  width: calc(100% / 2 - 25px);
+
+}
+ form .form-content .tittle{
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+ 
+ }
+ form .form-content .tittle::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 25px;
+  background-color: cadetblue;
+ }
+ form .reser1-form .tittle::before{
+  width: 20px;
+ }
+ form .form-content .input-boxes{
+  margin-top: 30px;
+   }
+   form .form-content .input-box
+   {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 0 10px;
+     }
+     .form-content .input-box input
+     {
+      height: 100%;
+      width: 100%;
+      border: none;
+      padding: 0 30px ;
+      font-size: 16px;
+      font-weight: 500px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+}
+
+     .form-content .input-box input:focus{
+      border-color: cadetblue;
+     }
+     form .form-content .button{
+      color: #fff;
+      margin-top: 40px;
+     }
+     form .form-content  .button input{
+      color: #fff;
+      background: cadetblue;
+      border-radius: 6px;
+      padding: 0;
+      cursor:pointer ;
+      transition: all 0.4s ease;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+      
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+}
+form .form-content  .button input:hover{
+  background: rgb(153, 200, 253);
+}

@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './composents/navbar/Navbar';
 import Homee from './composents/Homee'
 import Reservation from './composents/Reservation/Reservation';
-import ReservationForm from './composents/Reservation/ReservationForm';
+import ReservationForm from './composents/Reservation/Res';
 import About from './composents/About/About'
 import Login from './composents/Login/Login';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';

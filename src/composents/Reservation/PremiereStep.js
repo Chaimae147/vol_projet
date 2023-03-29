@@ -23,7 +23,7 @@ export default function PremiereStep() {
           <input type="text" placeholder="Date Retour" onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
           </div>
           <div className='button input-box'>
-            <input type="submit" value='SUIVANT'/>
+            <input type="submit" style={{ marginLeft:'70%' }} value='SUIVANT >'/>
           </div>
         </div>
       </div>

@@ -4,9 +4,7 @@ import Navbar from '../navbar/Navbar'
 import "./Reservation.css"
 import ticket from './reservation-billet-avion-ligne-appareil-concept-vol-voyage-planification-vacances-ete-illustration_277904-2817.png'
 import { useState } from 'react'
-import PremiereStep from './PremiereStep'
-import DeuxiemeStep from './DeuxiemeStep'
-import TroisiemeStep from './TroisiemeStep'
+
 export default function Reservation() {
   const [step, setStep] = useState(1);
   const [origine, setOrigine] = useState('');

@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import './login.css'
 export default function Login() {
@@ -10,25 +8,83 @@ export default function Login() {
         <a href="/" style={{ color:'white' }}>TRAVEL AIR</a>
       </div>
       </nav>
-      <p></p>
       <div className=' container'>
-        <h2 className='ml-6'>Connectez-vous</h2>
-        <br/>
-        <form action="login.php" method="post" class="w-50">
-          <div class="form-group mb-3 w-50">
-          <input type="email" class="form-control" id="emaill" placeholder="E-mail" name="email" />
-          </div>
-        <div class="form-group mb-3 w-50">
-        <input type="password" class="form-control" id="Mpasse" placeholder="Mot de passe" name="password"/>
-        
+        <div className='signin-signup'>
+          <from action="" className='sign-in-signup' >
+            <h2 className='title'>sign in</h2>
+            <div className='input-field'>
+              <i className='fas fas-user'></i>
+              <input type="text" placeholder='Username'/>
+            </div>
+            <div className='input-field'>
+              <i className='fas fas-lock'></i>
+              <input type="password" placeholder='Password'/>
+            </div>
+            <input type="submit" value="login" className='btn'/>
+            <p className='social-text'>or sign in with social platform</p>
+            <div className='social-media'>
+
+              <a href='#' className='social-icon'>
+                <i className='fab fa-facebook'></i>
+              </a>
+
+              <a href='' className='social-icon'>
+                <i className='fab fa-twitter'></i>
+              </a>
+
+              <a href='' className='social-icon'>
+                <i className='fab fa-google'></i>
+              </a>
+              
+              <a href='' className='social-icon'>
+                <i className='fab fa-linkedin-in'></i>
+              </a>
+
+            </div>
+            </from>
+            <from action="" className='sign-up-signup' >
+            <h2 className='title'>sign up</h2>
+            
+            <div className='input-field'>
+              <i className='fas fas-user'></i>
+              <input type="text" placeholder='Username'/>
+            </div>
+
+            <div className='input-field'>
+              <i className='fas fas-envelope'></i>
+              <input type="text" placeholder='Email'/>
+            </div>
+
+            <div className='input-field'>
+              <i className='fas fas-lock'></i>
+              <input type="password" placeholder='Password'/>
+            </div>
+
+            <input type="button" value="sign up" className='btn'/>
+            <p className='social-text'>or sign in with social platform</p>
+            <div className='social-media'>
+
+              <a href='#' className='social-icon'>
+                <i className='fab fa-facebook'></i>
+              </a>
+
+              <a href='' className='social-icon'>
+              <i className='fab fa-twitter'></i>
+              </a>
+
+              <a href='' className='social-icon'>
+                <i className='fab fa-google'></i>
+              </a>
+              
+              <a href='' className='social-icon'>
+                <i className='fab fa-linkedin-in'></i>
+              </a>
+              
+            </div>
+            </from>
         </div>
-        <div class="btnnlog w-50 ">
-          <button type="submit" name="submit" class=" form-control form-control-lg shadow-sm btn btn-primary " >Connexion</button>
-        </div>
-        
-        </form>
-        
       </div>
+      
     </div>
     
 

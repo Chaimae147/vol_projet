@@ -8,15 +8,16 @@ export default function Login() {
         <a href="/" style={{ color:'white' }}>TRAVEL AIR</a>
       </div>
       </nav>
-      <div className=' container'>
+      <div className='boooody'>
+              <div className=' container1'>
         <div className='signin-signup'>
           <from action="" className='sign-in-signup' >
             <h2 className='title'>sign in</h2>
-            <div className='input-field'>
+            <div className='input-field1'>
               <i className='fas fas-user'></i>
               <input type="text" placeholder='Username'/>
             </div>
-            <div className='input-field'>
+            <div className='input-field1'>
               <i className='fas fas-lock'></i>
               <input type="password" placeholder='Password'/>
             </div>
@@ -45,17 +46,17 @@ export default function Login() {
             <from action="" className='sign-up-signup' >
             <h2 className='title'>sign up</h2>
             
-            <div className='input-field'>
+            <div className='input-field1'>
               <i className='fas fas-user'></i>
               <input type="text" placeholder='Username'/>
             </div>
 
-            <div className='input-field'>
+            <div className='input-field1'>
               <i className='fas fas-envelope'></i>
               <input type="text" placeholder='Email'/>
             </div>
 
-            <div className='input-field'>
+            <div className='input-field1'>
               <i className='fas fas-lock'></i>
               <input type="password" placeholder='Password'/>
             </div>
@@ -85,7 +86,8 @@ export default function Login() {
         </div>
       </div>
       
-    </div>
+    </div></div>
+
     
 
   )

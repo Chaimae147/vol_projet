@@ -5,7 +5,7 @@ import Homee from './composents/Homee'
 import Reservation from './composents/Reservation/Reservation';
 import ReservationForm from './composents/Reservation/Res';
 import About from './composents/About/About'
-import Login from './composents/Login/Login';
+import Login from './composents/Login/login';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 function App() {
   return (

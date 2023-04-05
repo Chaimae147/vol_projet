@@ -15,13 +15,13 @@ export default function Login() {
             <h2 className='title'>sign in</h2>
             <div className='input-field1'>
               <i className='fas fas-user'></i>
-              <input type="text" placeholder='Username'/>
+              <input className='innput' type="text" placeholder='Username'/>
             </div>
             <div className='input-field1'>
               <i className='fas fas-lock'></i>
-              <input type="password" placeholder='Password'/>
+              <input className='innput' type="password" placeholder='Password'/>
             </div>
-            <input type="submit" value="login" className='btn'/>
+            <input className='innput' type="submit" value="login" className='btn'/>
             <p className='social-text'>or sign in with social platform</p>
             <div className='social-media'>
 
@@ -48,20 +48,20 @@ export default function Login() {
             
             <div className='input-field1'>
               <i className='fas fas-user'></i>
-              <input type="text" placeholder='Username'/>
+              <input className='innput' type="text" placeholder='Username'/>
             </div>
 
             <div className='input-field1'>
               <i className='fas fas-envelope'></i>
-              <input type="text" placeholder='Email'/>
+              <input className='innput' type="text" placeholder='Email'/>
             </div>
 
             <div className='input-field1'>
               <i className='fas fas-lock'></i>
-              <input type="password" placeholder='Password'/>
+              <input className='innput' type="password" placeholder='Password'/>
             </div>
 
-            <input type="button" value="sign up" className='btn'/>
+            <input className='innput' type="button" value="sign up" className='btn'/>
             <p className='social-text'>or sign in with social platform</p>
             <div className='social-media'>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import './login.css'
+
 export default function Login() {
   return (
     <div className='photologin'>
@@ -21,7 +22,7 @@ export default function Login() {
               <i className='fas fas-lock'></i>
               <input className='innput' type="password" placeholder='Password'/>
             </div>
-            <input className='innput' type="submit" value="login" className='btn'/>
+            <input className='innput btn' type="submit" value="login" />
             <p className='social-text'>or sign in with social platform</p>
             <div className='social-media'>
 
@@ -61,7 +62,7 @@ export default function Login() {
               <input className='innput' type="password" placeholder='Password'/>
             </div>
 
-            <input className='innput' type="button" value="sign up" className='btn'/>
+            <input className='innput btn' type="button" value="sign up" />
             <p className='social-text'>or sign in with social platform</p>
             <div className='social-media'>
 

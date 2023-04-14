@@ -3,6 +3,8 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 import "./Reservation.css"
 import ticket from './reservation-billet-avion-ligne-appareil-concept-vol-voyage-planification-vacances-ete-illustration_277904-2817.png'
+import paiment from './undraw_Credit_card_re_blml.png'
+import passenger from './airline-flight-booking-service-flat-design-isometric-vector-illustration-advertisement-web-application-mobile-app-template-156304089.jpg'
 import { useState } from 'react'
 
 export default function Reservation() {
@@ -78,7 +80,7 @@ export default function Reservation() {
               <div className='input-box'>
                 <label> 
                   <select value={classe} onChange={(e) => setClasse(e.target.value)} style={{   width: '370px',color:'#6e6e6e' }}>
-                  <option value="">-- Selectionnez Classe --</option>
+                  <option value="" disabled>-- Selectionnez Classe --</option>
                     <option value="economy">Economique</option>
                     <option value="business">Affaires</option>
                     <option value="first">Première classe</option>
@@ -89,7 +91,7 @@ export default function Reservation() {
                 <div className='input-box'>
                 <label>
                   <select  value={passager} onChange={(e) => setPassagers(e.target.value)} style={{   width: '370px' ,color:'#6e6e6e'}}>
-                  <option value="">-- Selectionnez Passagers --</option>
+                  <option value="" disabled>-- Selectionnez Passagers --</option>
 
                     <option value="ADULTES">ADULTES</option>
                     <option value="ENFANTS">ENFANTS</option>
@@ -101,15 +103,16 @@ export default function Reservation() {
                 <div className='input-box'>
                   <input type="text" placeholder="CODE DE REDUCTION" value={reduction} onChange={(e) => setReduction(e.target.value)} required/>
                 </div>
+                <br />
+                <br />
               <div className='button input-box'>
               <input type="button"  onClick={handlePrev} className='' style={{ marginLeft:'0' }}  value='< PRECEDENT'/>
-      
                 <input type="button"  onClick={handleNext} className='' value='SUIVANT >'/>
               </div>
             </div>
           </div>
           <div className='cover'>  
-               <img src={ticket} alt="" />
+               <img className='' src={ticket} alt="" />
           </div>
          </div>
         </form>
@@ -140,7 +143,7 @@ export default function Reservation() {
            </div>
          </div>
          <div className='cover'>  
-              <img src={ticket} alt="" />
+              <img className='' src={ticket} alt="" />
          </div>
         </div>
        </form>

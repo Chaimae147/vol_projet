@@ -60,17 +60,22 @@
   .open .navbar-toggle-icon:last-of-type {
     transform: rotate(-45deg) translate(2px, -2px);
   }
-  
+  .res{
+    margin-right:35vh;
+  }
   @media screen and (max-width: 994px) {
     .navbar-nav {
-      position: absolute;
+      position: fixed;
+      z-index: 9999;
       top: 60px;
       left: 0;
       width: 100%;
-      background-color: #333;
+      height: 100%;
+      background-color: #4a4b5c;
       display: none;
       flex-direction: column;
       align-items: center;
+      opacity: 0.9;
     }
   
     .navbar-nav.open {
@@ -79,6 +84,11 @@
   
     .nav-item {
       margin: 10px 0;
+      margin-top: 50px;
+
+    }
+     .res{
+      margin-right: 35px;
     }
   
     .navbar-toggle {

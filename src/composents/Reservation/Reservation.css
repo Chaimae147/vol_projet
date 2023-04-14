@@ -5,15 +5,10 @@
     color: rgb(46, 46, 78);
 
 }
-
-
-
 .c3{
     border-radius: 10px;
     background-color: white;
-margin: 40px;
-
-   
+    margin: 40px;
   }
 
   .backgroundss{
@@ -24,7 +19,6 @@ margin: 40px;
    position: relative;
    top: 0;
   }
-
   /*Premeiere Step */
   .boddy{
     min-height: 80vh;
@@ -55,11 +49,8 @@ margin: 40px;
   
  }
  .containner .cover img{ 
-  
   height: 90%;
   width: 100%;
-
-  
  }
  .containner .cover .immg{ 
   
@@ -81,17 +72,14 @@ margin: 40px;
   align-items: center;
   justify-content: space-between;
  }
-
 .form-content .reser-form{
   width: calc(100% / 2 - 25px);
-
 }
   .tittle{
   position: relative;
   font-size: 24px;
   font-weight: 500;
   color: #333;
- 
  }
  form .form-content .tittle2{
   position: relative;
@@ -138,7 +126,6 @@ margin: 40px;
       -ms-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
 }
-
      .form-content .input-box input:focus{
       border-color: cadetblue;
      }

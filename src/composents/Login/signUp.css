@@ -1,8 +1,7 @@
-
 .navbar-brand {
   font-size: 1.5rem;
 }
-.photologin {
+.photosignup {
   background-image: url("../../../public/imgs/AdobeStock_249454423-scaled.jpeg");
   background-size: cover;
   height: 100vh;
@@ -15,7 +14,7 @@
 * {
   box-sizing: border-box;
 }
-.bodd {
+.boddd {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -25,8 +24,7 @@
   min-height: 70%;
   margin: 5%;
 }
-
-.conttainer {
+.contttainer {
   position: relative;
   width: 768px;
   max-width: 100%;
@@ -37,8 +35,7 @@
   box-shadow: 0 14px 28px rgb(0, 0, 0, 0.25), 0 10px 10px rgb(0, 0, 0, 0.22)
 }
 
-.sign-up,
-.sign-in {
+.signn-up {
   position: absolute;
   top: 0;
   left: 0;
@@ -46,18 +43,7 @@
   transition: all 0.6s ease-in-out;
 }
 
-.sign-up {
-  width: 50%;
-  opacity: 0;
-  z-index: 1;
-}
-
-.sign-in {
-  width: 50%;
-  z-index: 2;
-}
-
-.formSignIn {
+.ffform{
   background: #ffff;
   display: flex;
   align-items: center;
@@ -67,13 +53,10 @@
   height: 100%;
   text-align: center;
 }
-
 h1 {
   font-weight: bold;
-  margin: 0;
-
+  margin: 10px;
 }
-
 p {
   font-size: 14px;
   font-weight: 100;
@@ -81,8 +64,7 @@ p {
   letter-spacing: 0.5px;
   margin: 15px 0 20px;
 }
-
-.inpput {
+#inputsignup{
   background: #eee;
   padding: 12px 15px;
   margin: 8px 15px;
@@ -90,15 +72,15 @@ p {
   border-radius: 5px;
   border: none;
   outline: none;
-}
+
+}  
 a{
   color: #333;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
 }
-.btnSignIn{
-  
+#signInnn{
   color: #fff;
   background: cadetblue;
   font-size: 12px;
@@ -106,25 +88,58 @@ a{
   padding: 12px 55px;
   margin: 20px ;
   border-radius: 20px;
-  border: 1px solid cadetblue;
+  border: 1px solid white;
   outline: none;
   letter-spacing: 1px ;
   text-transform: uppercase;
   transition: transform 80ms ease-in;
   cursor: pointer;
 }
-.btnSignIn:active{
-  transform: scale(0.90);
+.btnsignUppp{
+  color: #fff;
+  background: cadetblue;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 55px;
+  margin: 20px ;
+  border-radius: 20px;
+  border: 1px solid white;
+  outline: none;
+  letter-spacing: 1px ;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
 }
-#signIn,#signUp{
+
+
+/* .btnSignInn:active{
+  transform: scale(0.90);
+} */
+
+/* #signInnn, */
+#signUppp{
   background-color: transparent;
   border: 2px solid #fff;
 }
-.btnSignUp{
-   /* background-color: transparent;
-  border: 2px solid #fff;
-  color:white;  */
-  
+/* .contttainer.right-panel-active .signn-up{
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+} */
+.overlayyy-contttainer{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: tranform 0.6s ease-in-out;
+  z-index: 100;
+}
+.contttainer.right-panel-active .overlayyy-contttainer{
+  transform: translateX(-100%);
+}
+#signInn{
   color: cadetblue;
   background: white;
   font-size: 12px;
@@ -139,25 +154,10 @@ a{
   transition: transform 80ms ease-in;
   cursor: pointer;
 }
-.conttainer.right-panel-active .sign-up{
-  transform: translateX(100%);
-  opacity: 1;
-  z-index: 5;
+.btnSignInn:active{
+  transform: scale(0.90);
 }
-.overlayy-conttainer{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  transition: tranform 0.6s ease-in-out;
-  z-index: 100;
-}
-.conttainer.right-panel-active .overlayy-conttainer{
-  transform: translateX(-100%);
-}
-.overlayy{
+.overlayyy{
   position: relative;
   color: #fff;
   background: cadetblue;
@@ -168,10 +168,10 @@ a{
   transform: translateX(0);
   transition: transform 0.6s ease-in-out;
 }
-.conttainer.right-panel-active .overlayy{
+.contttainer.right-panel-active .overlayyy{
   transform: translateX(50%);
 }
-.overlayy-left, .overlayy-right{
+.overlayyy-left, .overlayyy-right{
   position: absolute;
   display: flex;
   align-items: center;
@@ -185,20 +185,20 @@ a{
   transform: translateX(0);
   transition: tranform 0.6s ease-in-out;
 }
-.overlayy-left{
+.overlayyy-left{
   transform: translateX(-20%);
 }
-.overlayy-right{
+.overlayyy-right{
   right: 0;
   transform: translateX(0);
 }
-.conttainer.right-panel-active .overlayy-left{
+.contttainer.right-panel-active .overlayyy-left{
   transform: translateX(0);
 }
-.conttainer.right-panel-active .overlayy-left{
+.contttainer.right-panel-active .overlayyy-left{
   transform: translateX(20%);
 }
-.sociall-conttainer{
+/* .sociall-conttainer{
   margin: 20px 0;
 }
 .sociall-conttainer a{
@@ -210,10 +210,6 @@ a{
   align-items: center;
   border: 1px solid #ccc;
   border-radius: 50%;
-}
-
-
-
-
+} */
 
 

@@ -17,7 +17,7 @@ export default function signUp() {
               <input className='inppput' type='text' name='txtt' placeholder='Name' id='inputsignup' required=''/>
               <input className='inppput' type='email' name='emaill' placeholder='Email' id='inputsignup' required=''/>
               <input className='inppput' type='password' name='pswdd' placeholder='Password' id='inputsignup' required=''/>
-              <button className=''>Sign Up</button>
+              <button className='btnSignIn'>Sign Up</button>
             </form>
           </div>
           <div className='signn-in'>

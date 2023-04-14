@@ -26,8 +26,6 @@ export default function signUp() {
           <div className='overlayyy-contttainer'>
             <div className='overlayyy'>
               <div className='overlayyy-left'>
-                <h1>Hello,Friend </h1>
-                <p>Enter your personal details and start journey with us</p>
                 <button id='signUppp' className='btnSignUppp'>Sign up</button>
               </div>
               <div className='overlayyy-right'>

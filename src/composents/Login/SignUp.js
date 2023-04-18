@@ -15,7 +15,6 @@ export default function signUp() {
             <form className='ffform' action='#'>
               <h1>Créer Compte</h1>
               <input className='inppput' type='text' name='txtt' placeholder='Nom' id='inputsignup' required=''/>
-              <input className='inppput' type='text' name='txt' placeholder='Prenom' id='inputsignup' required=''/>
               <input className='inppput' type='email' name='emaill' placeholder='Email' id='inputsignup' required=''/>
               <input className='inppput' type='password' name='pswdd' placeholder='Mot de passe' id='inputsignup' required=''/>
               

@@ -6,7 +6,7 @@ export default function Login() {
     <div className='photologin'>
       <nav className='navbar container'>
       <div className="navbar-brand">
-        <a href="/" style={{ color:'white' }}>TRAVEL AIR</a>
+        <a href="/" className='n' style={{ color:'white' }}>TRAVEL AIR</a>
       </div>
       </nav>
       <div className='bodd'>

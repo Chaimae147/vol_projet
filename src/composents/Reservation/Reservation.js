@@ -3,21 +3,19 @@ import React from 'react'
 import Navbar from '../navbar/Navbar'
 import "./Reservation.css"
 import ticket from './reservation-billet-avion-ligne-appareil-concept-vol-voyage-planification-vacances-ete-illustration_277904-2817.png'
-import paiment from './undraw_Credit_card_re_blml.png'
-import passenger from './airline-flight-booking-service-flat-design-isometric-vector-illustration-advertisement-web-application-mobile-app-template-156304089.jpg'
 import { useState } from 'react'
-
+import axios from 'axios';
 export default function Reservation() {
   const [step, setStep] = useState(1);
   const [origine, setOrigine] = useState('');
   const [destination, setDestination] = useState('');
-  const [depart, setDepart] = useState('');
-  const [retour, setRetour] = useState('');
+  const [dateDepart, setDepart] = useState('');
+  const [dateRetour, setRetour] = useState('');
   const [classe, setClasse] = useState('');
-  const [reduction, setReduction] = useState('');
-  const [passager, setPassagers] = useState('');
-  const [modePay, setModepay] = useState('');
-
+  const [codereduction, setReduction] = useState('');
+  const [passagers, setPassagers] = useState('');
+  const [modePaiment, setModepay] = useState('');
+  const[message,setMessage]=useState('');
   const handleNext = () => {
     setStep(step + 1);
   };
@@ -31,7 +29,37 @@ export default function Reservation() {
   };
   
 
-  const progress = ((step - 1) / 3) * 100; // Assuming three steps
+  const progress = ((step - 1) / 4) * 100; // Assuming three steps
+  const ajouterreservation = () => {
+    axios.post('http://127.0.0.1:8000/api/reservations', { origine, destination, dateDepart , classe, passagers,codereduction,modePaiment })
+  .then((response) => {
+    setMessage(response.data.message);
+    setOrigine('');
+    setDestination('');
+    setDepart('');
+    setRetour('');
+    setClasse('');
+    setPassagers('');
+    setReduction('');
+    setModepay('');
+
+
+  })
+  .catch((error) => {
+    console.log(error);
+    setMessage('Une erreur est survenue. Veuillez réessayer plus tard.');
+  });
+   
+    
+  setOrigine('');
+  setDestination('');
+  setDepart('');
+  setRetour('');
+  setClasse('');
+  setPassagers('');
+  setReduction('');
+  setModepay('');
+} 
   return (
 
     <div className='backgroundss'>
@@ -55,10 +83,10 @@ export default function Reservation() {
                 <input type="text" placeholder='Selectionnez destination' value={destination} onChange={(e) => setDestination(e.target.value)}  required/>
               </div>
               <div className='input-box'>
-              <input type="text" placeholder="Date Depart" value={depart} onChange={(e) => setDepart(e.target.value)}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
+              <input type="text" placeholder="Date Depart" value={dateDepart} onChange={(e) => setDepart(e.target.value)}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
               </div>
               <div className=' input-box'>
-              <input type="text" placeholder="Date Retour" value={retour} onChange={(e) => setRetour(e.target.value)}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
+              <input type="text" placeholder="Date Retour" value={dateRetour} onChange={(e) => setRetour(e.target.value)}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
               </div>
               <div className='button input-box'>
                 <input type="button" onClick={handleNext} style={{ marginLeft:'70%' }} value='SUIVANT >'/>
@@ -90,7 +118,7 @@ export default function Reservation() {
               
                 <div className='input-box'>
                 <label>
-                  <select  value={passager} onChange={(e) => setPassagers(e.target.value)} style={{   width: '370px' ,color:'#6e6e6e'}}>
+                  <select  value={passagers} onChange={(e) => setPassagers(e.target.value)} style={{   width: '370px' ,color:'#6e6e6e'}}>
                   <option value="" disabled>-- Selectionnez Passagers --</option>
 
                     <option value="ADULTES">ADULTES</option>
@@ -101,7 +129,7 @@ export default function Reservation() {
                 
                 </div>
                 <div className='input-box'>
-                  <input type="text" placeholder="CODE DE REDUCTION" value={reduction} onChange={(e) => setReduction(e.target.value)} required/>
+                  <input type="text" placeholder="CODE DE REDUCTION" value={codereduction} onChange={(e) => setReduction(e.target.value)} required/>
                 </div>
                 <br />
                 <br />
@@ -125,20 +153,21 @@ export default function Reservation() {
            <div className='tittle2'>MODE DE PAIMENT : </div>
            <div className='input-boxes'>
              <div className='input-box1'>
-               <input type="radio" name='paiment' value='carteBancarire' checked={modePay === 'carteBancarire'} onChange={(e) => setModepay(e.target.value)} required/>&nbsp;&nbsp;&nbsp; CARTE BANCAIRE
+               <input type="radio" name='paiment' value='carteBancarire' checked={modePaiment === 'carteBancarire'} onChange={(e) => setModepay(e.target.value)} />&nbsp;&nbsp;&nbsp; CARTE BANCAIRE
              </div>
              <div className='input-box1'>
-               <input type="radio"  name='paiment' value='carteInternationale' checked={modePay === 'carteInternationale'} onChange={(e) => setModepay(e.target.value)} required/>&nbsp;&nbsp;&nbsp;CARTE BANCAIRE INTERNATIONALE
+               <input type="radio"  name='paiment' value='carteInternationale' checked={modePaiment === 'carteInternationale'} onChange={(e) => setModepay(e.target.value)} />&nbsp;&nbsp;&nbsp;CARTE BANCAIRE INTERNATIONALE
              </div>
              
              <div className='input-box1'>
-               <input type="radio"  name='paiment' value='paimentespeces' checked={modePay === 'paimentespeces'} onChange={(e) => setModepay(e.target.value)} required/>&nbsp;&nbsp;&nbsp;PAIMENT EN ESPECES
+               <input type="radio"  name='paiment' value='paimentespeces' checked={modePaiment === 'paimentespeces'} onChange={(e) => setModepay(e.target.value)} />&nbsp;&nbsp;&nbsp;PAIMENT EN ESPECES
              </div>
              
              <div className='button input-box'>
              <input type="button" onClick={handlePrev}  className='' style={{ marginLeft:'0' }}  value='< PRECEDENT'/>
      
-               <input type="submit"  onClick={handleSubmit} className='' value='RESERVER'/>
+               <input type="submit"  onClick={ajouterreservation} className='' value='RESERVER'/>
+               {message}
              </div>
            </div>
          </div>

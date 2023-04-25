@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #f6f5f7;
+  /* background: #f6f5f7; */
   font-family: 'monserrat', sans-serif;
   min-height: 70%;
   margin: 5%;
@@ -64,7 +64,7 @@ p {
   letter-spacing: 0.5px;
   margin: 15px 0 20px;
 }
-#inputsignup{
+.inppput{
   background: #eee;
   padding: 12px 15px;
   margin: 8px 15px;

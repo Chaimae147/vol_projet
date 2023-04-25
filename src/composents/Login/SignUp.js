@@ -1,7 +1,26 @@
-import React from 'react'
+import {useState} from 'react'
 import '../Login/signUp.css'
-import { Link } from 'react-router-dom'
-export default function signUp() {
+import { Link,useNavigate } from 'react-router-dom'
+import axios from 'axios';
+export default function SignUp() {
+  const navigator = useNavigate();
+  const [name1,setname] = useState();
+  const [email1,setemail] = useState();
+  const [password1,setpassword] = useState();
+  const signupoc = ()=>{axios.post('http://localhost:8000/api/signup', {
+    name: name1,
+    email: email1,
+    password: password1
+  })
+  .then((res) => {
+    alert(res.data.message)
+    navigator('/'); // This will navigate to the home page
+  })
+  .catch(error => {
+    console.log(error);
+  });
+  
+  }
   return (
     <div className='photosignup'>
       <nav className='navbar container'>
@@ -12,12 +31,13 @@ export default function signUp() {
       <div className='boddd'>
         <div className='contttainer' id='main'>
           <div className='signn-up'>
-            <form className='ffform' action='#'>
+          <form className='ffform' action='#' onSubmit={(e) => {e.preventDefault();}}>
+
               <h1>Create Account</h1>
-              <input className='inppput' type='text' name='txtt' placeholder='Name' id='inputsignup' required=''/>
-              <input className='inppput' type='email' name='emaill' placeholder='Email' id='inputsignup' required=''/>
-              <input className='inppput' type='password' name='pswdd' placeholder='Password' id='inputsignup' required=''/>
-              <button className='btnSignIn'>Sign Up</button>
+              <input className='inppput' type='text' name='name' value={name1} placeholder='Name' id='inputsignup1' required='' onChange={(e)=>setname(e.target.value)}/>
+              <input className='inppput' type='email' name='email' value={email1} placeholder='Email' id='inputsignup2' required='' onChange={(e)=>setemail(e.target.value)} />
+              <input className='inppput' type='password' name='password'value={password1} placeholder='Password' id='inputsignup3' required='' onChange={(e)=>setpassword(e.target.value)}/>
+              <button className='btnSignIn' onClick={signupoc}>Sign Up</button>
             </form>
           </div>
           <div className='signn-in'>

@@ -13,12 +13,11 @@ export default function About() {
       </div>
         <div  className='oody' >
         <h1 className='titre'>Trouvez les meilleures offres avec TRAVAIL AIR</h1>
-
-       
+       <div class="input-group">
+      <input type="search" className="form-control  cher" onChange={(e)=>setChercher(e.target.value)}  placeholder=" Cherchez la ville vous voulez reserver" /> 
+   </div> 
    <div className="card-container">
-   <div class="input-group">
-  <input type="search" className="form-control  cher" onChange={(e)=>setChercher(e.target.value)}  placeholder=" Cherchez la ville vous voulez reserver" /> 
-  </div> 
+   
       {
         data.filter((t)=>{
           return chercher.toLocaleLowerCase() === ''? t : t.title.toLocaleLowerCase().includes(chercher);

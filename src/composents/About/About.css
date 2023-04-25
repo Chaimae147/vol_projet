@@ -37,7 +37,7 @@ border-radius: 8px; */
   .titre{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 10vh;
-    margin-left: 20px;
+    margin-left: 120px;
     color: white;
   }
   .backgroundd{
@@ -50,8 +50,9 @@ border-radius: 8px; */
   }
   .cher{
     width: 10px;
-    margin-left: 150px; ;
-    margin-right: 150px;
+    margin-left:120px; ;
+    margin-right:120px;
+    margin-bottom: 30px;
 }
 .card {
     border: 1px solid #e6d5f5;
@@ -73,11 +74,18 @@ border-radius: 8px; */
   .card p {
     font-size: 16px;
     line-height: 1.5;
+    margin: auto;
   }
-  .card-container {
+  /* .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+  } */
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
     align-items: center;
   }
   .booknow{

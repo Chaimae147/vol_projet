@@ -6,7 +6,7 @@ import ticket from './reservation-billet-avion-ligne-appareil-concept-vol-voyage
 import { useState } from 'react'
 import axios from 'axios';
 export default function Reservation() {
-  const [formData, setFormData] = useState({
+ /*  const [formData, setFormData] = useState({
     origine: '',
     destination: '',
     dateDepart: '',
@@ -20,7 +20,7 @@ export default function Reservation() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post('http://127.0.0.1:8000/api/ajouterreservation', formData)
+    axios.post('http://127.0.0.1:8000/api/ajoutereservation', formData)
       .then(response => {
         setMessage(response.data.message);
       })
@@ -32,9 +32,9 @@ export default function Reservation() {
 
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
-  };
+  }; */
    const [step, setStep] = useState(1);
-  /*const [origine, setOrigine] = useState();
+  const [origine, setOrigine] = useState();
   const [destination, setDestination] = useState();
   const [dateDepart, setDepart] = useState();
   const [dateRetour, setRetour] = useState();
@@ -42,7 +42,7 @@ export default function Reservation() {
   const [codereduction, setReduction] = useState();
   const [passagers, setPassagers] = useState();
   const [modePaiment, setModepay] = useState();
-    */
+    
   const[message,setMessage]=useState('');
   const handleNext = () => {
     setStep(step + 1);
@@ -56,8 +56,8 @@ export default function Reservation() {
   
 
   const progress = ((step - 1) / 4) * 100; // Assuming three steps
-  /* const ajouterreservation = () => {
-    axios.post('http://127.0.0.1:8000/api/ajoutereservation', { origine, destination, dateDepart , classe, passagers,codereduction,modePaiment })
+   const ajouterreservation = () => {
+    axios.post('http://127.0.0.1:8000/api/reservations', { origine, destination, dateDepart,dateRetour,classe, passagers,codereduction  })/*, ,modePaiment*/ 
   .then((response) => {
     setMessage(response.data.message);
     setOrigine('');
@@ -67,7 +67,7 @@ export default function Reservation() {
     setClasse('');
     setPassagers('');
     setReduction('');
-    setModepay('');
+   // setModepay('');
 
 
   })
@@ -84,11 +84,11 @@ export default function Reservation() {
   setClasse('');
   setPassagers('');
   setReduction('');
-  setModepay('');
+ // setModepay('');
 }
 
 
-value={origine} onChange={(e) => setOrigine(e.target.value)}*/
+/*value={formData.origine} onChange={handleInputChange}*/
   return (
 
     <div className='backgroundss'>
@@ -106,16 +106,16 @@ value={origine} onChange={(e) => setOrigine(e.target.value)}*/
          <div className='reser-form'>
             <div className='input-boxes'>
               <div className='input-box'>
-                <input type="text"name='origine' placeholder="Selectionnez l'origine"   value={formData.origine} onChange={handleInputChange}/>
+                <input type="text"name='origine' placeholder="Selectionnez l'origine"  value={origine} onChange={(e) => setOrigine(e.target.value)}/>
               </div>
               <div className='input-box'>
-                <input type="text" name='destination' placeholder='Selectionnez destination' value={formData.destination} onChange={handleInputChange}/>
+                <input type="text" name='destination' placeholder='Selectionnez destination' value={destination} onChange={(e) => setDestination(e.target.value)}/>
               </div>
               <div className='input-box'>
-              <input type="text" name='dateDepart' placeholder="Date Depart" value={formData.dateDepart} onChange={handleInputChange}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
+              <input type="text" name='dateDepart' placeholder="Date Depart" value={dateDepart} onChange={(e) => setDepart(e.target.value)}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
               </div>
               <div className=' input-box'>
-              <input type="text" name='dateRetour' placeholder="Date Retour" value={formData.dateRetour} onChange={handleInputChange}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
+              <input type="text" name='dateRetour' placeholder="Date Retour" value={dateRetour} onChange={(e) => setRetour(e.target.value)}  onFocus={(e) => e.currentTarget.type = "date"} onBlur={(e) => e.currentTarget.type = "text"} />
               </div>
               <div className='button input-box'>
                 <input type="button" onClick={handleNext} style={{ marginLeft:'70%' }} value='SUIVANT >'/>
@@ -136,7 +136,7 @@ value={origine} onChange={(e) => setOrigine(e.target.value)}*/
             <div className='input-boxes'>
               <div className='input-box'>
                 <label> 
-                  <select name='classe' value={formData.classe} onChange={handleInputChange} style={{   width: '370px',color:'#6e6e6e' }}>
+                  <select name='classe' value={classe} onChange={(e) => setClasse(e.target.value)} style={{   width: '370px',color:'#6e6e6e' }}>
                   <option value="" disabled>-- Selectionnez Classe --</option>
                     <option value="economy">Economique</option>
                     <option value="business">Affaires</option>
@@ -147,7 +147,7 @@ value={origine} onChange={(e) => setOrigine(e.target.value)}*/
               
                 <div className='input-box'>
                 <label>
-                  <select name='passagers' value={formData.classe} onChange={handleInputChange} style={{   width: '370px' ,color:'#6e6e6e'}}>
+                  <select name='passagers' value={passagers} onChange={(e) => setPassagers(e.target.value)} style={{   width: '370px' ,color:'#6e6e6e'}}>
                   <option value="" disabled>-- Selectionnez Passagers --</option>
 
                     <option value="ADULTES">ADULTES</option>
@@ -158,13 +158,13 @@ value={origine} onChange={(e) => setOrigine(e.target.value)}*/
                 
                 </div>
                 <div className='input-box'>
-                  <input name='codereduction' type="text" placeholder="CODE DE REDUCTION" value={formData.codereduction} onChange={handleInputChange}/>
+                  <input name='codereduction' value={codereduction} onChange={(e) => setReduction(e.target.value)} type="text" placeholder="CODE DE REDUCTION" />
                 </div>
                 <br />
                 <br />
               <div className='button input-box'>
               <input type="button"  onClick={handlePrev} className='' style={{ marginLeft:'0' }}  value='< PRECEDENT'/>
-                <input type="button"  onClick={handleNext} className='' value='SUIVANT >'/>
+                <input type="button"  onClick={ajouterreservation} className='' value='SUIVANT >'/>
               </div>
             </div>
           </div>
@@ -195,7 +195,7 @@ value={origine} onChange={(e) => setOrigine(e.target.value)}*/
              <div className='button input-box'>
              <input type="button" onClick={handlePrev}  className='' style={{ marginLeft:'0' }}  value='< PRECEDENT'/>
      
-               <input type="submit"  onClick={handleSubmit} className='' value='RESERVER'/>
+               <input type="submit"  onClick={ajouterreservation} className='' value='RESERVER'/>
              </div>
            </div>
          </div>

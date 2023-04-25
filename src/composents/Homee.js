@@ -7,7 +7,7 @@ export default function Homee() {
       <Navbar/>
       
       <h1 className='centered-text'>Explorez le monde depuis les airs. <br /> Réservez vos vols dès maintenant !</h1>
-   <a href="/Reservatiom"> <button className='booknoww'>RESERVER MAINTENANT</button></a>
+   <a href="/Reservatiom"> <button className='booknoww'>RESERVER MAINTENANT </button></a>
    
    
     </div>

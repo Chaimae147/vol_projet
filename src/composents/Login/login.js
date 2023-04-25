@@ -30,7 +30,7 @@ export default function Login() {
     <div className='photologin'>
       <nav className='navbar container'>
       <div className="navbar-brand">
-        <a href="/" style={{ color:'white' }}>TRAVEL AIR</a>
+        <a href="/" className='n' style={{ color:'white' }}>TRAVEL AIR</a>
       </div>
       </nav>
       <div className='bodd'>
@@ -70,8 +70,8 @@ export default function Login() {
           <div className='overlayy-left'>
           </div>
           <div className='overlayy-right'>
-            <h1>Hello, Friend</h1>
-            <p>Enter your personal details and start journey with us</p>
+            <h2><b>Vous n'avez pas de compte ?</b></h2>
+            <p>Entrez vos informations personnelles et commencez votre voyage avec nous.</p>
             <button id='signUp' type='button' className='btnSignUp'><Link to={"/SignUp"}>sign Up</Link></button>
           </div>
         </div>

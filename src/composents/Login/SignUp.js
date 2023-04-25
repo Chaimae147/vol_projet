@@ -49,8 +49,8 @@ export default function SignUp() {
                 <button id='signUppp' className='btnSignUppp'>Sign up</button>
               </div>
               <div className='overlayyy-right'>
-                <h1>Welcome Back!</h1>
-                <p>To Keep connected with us please login with your personal info</p>
+                <h1>Creer votre compte</h1>
+                <p>Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles.</p>
                 <button id='signInnn' type='button' className='btnSignInn'><Link to={"/login"}> Sign In</Link></button>
               </div>
             </div>

@@ -52,6 +52,21 @@
   height: 90%;
   width: 100%;
  }
+ .containner .cover .immg{ 
+  
+  height: 90%;
+  width: 90%;
+
+  
+ }
+ .containner .cover .imgg{ 
+  
+  height: 70%;
+  width: 100%;
+  margin-top: 40px;
+
+  
+ }
  .containner .form-content{
   display: flex;
   align-items: center;

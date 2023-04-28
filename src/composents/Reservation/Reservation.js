@@ -45,19 +45,20 @@ export default function Reservation() {
     
   const[message,setMessage]=useState('');
   const handleNext = () => {
+    console.log('tfo')
     setStep(step + 1);
   };
 
   const handlePrev = () => {
     setStep(step - 1);
   };
-
-  
-  
-
   const progress = ((step - 1) / 4) * 100; // Assuming three steps
-   const ajouterreservation = () => {
-    axios.post('http://127.0.0.1:8000/api/reservations', { origine, destination, dateDepart,dateRetour,classe, passagers,codereduction  })/*, ,modePaiment*/ 
+  const handleInputChange = (e)=>{
+    setModepay(e.target.value)
+  }
+  const ajouterreservation = (e) => {
+    e.preventDefault();
+    axios.post('//localhost:8000/api/reservations', { origine, destination, dateDepart, dateRetour, classe, passagers,codereduction,modePaiment  })/*, ,modePaiment*/ 
   .then((response) => {
     setMessage(response.data.message);
     setOrigine('');
@@ -68,15 +69,12 @@ export default function Reservation() {
     setPassagers('');
     setReduction('');
    // setModepay('');
-
-
   })
+
   .catch((error) => {
     console.log(error);
     setMessage('Une erreur est survenue. Veuillez réessayer plus tard.');
   });
-   
-    
   setOrigine('');
   setDestination('');
   setDepart('');
@@ -164,7 +162,7 @@ export default function Reservation() {
                 <br />
               <div className='button input-box'>
               <input type="button"  onClick={handlePrev} className='' style={{ marginLeft:'0' }}  value='< PRECEDENT'/>
-                <input type="button"  onClick={ajouterreservation} className='' value='SUIVANT >'/>
+                <input type="button"  onClick={handleNext} className='' value='SUIVANT >'/>
               </div>
             </div>
           </div>
@@ -181,17 +179,17 @@ export default function Reservation() {
           
            <div className='tittle2'>MODE DE PAIMENT : </div>
            <div className='input-boxes'>
-            {/*  <div className='input-box1'>
-               <input type="radio" name='modePaiment' value='carteBancarire' checked={formData.modePaiment === 'carteBancarire'}  onChange={handleInputChange} />&nbsp;&nbsp;&nbsp; CARTE BANCAIRE
+             <div className='input-box1'>
+               <input type="radio" name='modePaiment' value='carteBancarire' checked={modePaiment === 'carteBancarire'}  onClick={handleInputChange} />&nbsp;&nbsp;&nbsp; CARTE BANCAIRE
              </div>
              <div className='input-box1'>
-               <input type="radio"  name='modePaiment' value='carteInternationale' checked={formData.modePaiment === 'carteBancarire'}  onChange={handleInputChange} />&nbsp;&nbsp;&nbsp;CARTE BANCAIRE INTERNATIONALE
+               <input type="radio"  name='modePaiment' value='carteInternationale' checked={modePaiment === 'carteInternationale'}  onClick={handleInputChange} />&nbsp;&nbsp;&nbsp;CARTE BANCAIRE INTERNATIONALE
              </div>
              
              <div className='input-box1'>
-               <input type="radio"  name='modePaiment' value='paimentespeces' checked={formData.modePaiment === 'carteBancarire'}  onChange={handleInputChange}/>&nbsp;&nbsp;&nbsp;PAIMENT EN ESPECES
+               <input type="radio"  name='modePaiment' value='paimentespeces' checked={modePaiment === 'paimentespeces'}  onClick={handleInputChange}/>&nbsp;&nbsp;&nbsp;PAIMENT EN ESPECES
              </div>
-              */}
+             
              <div className='button input-box'>
              <input type="button" onClick={handlePrev}  className='' style={{ marginLeft:'0' }}  value='< PRECEDENT'/>
      
